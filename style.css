@@ -1,0 +1,251 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video, input {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+    list-style-type: none;
+}
+
+body {
+    background-color: hsl(0, 100%, 74%);
+    background-image: url(/images/bg-intro-mobile.png);
+    background-size: cover;
+    
+    display: flex;
+
+    height: 100%;
+    width: 100dvw;
+
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    color: white;
+    font-size: 16px;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+
+    margin: 70px 20px 50px 20px;
+}
+
+.title {
+    text-align: center;
+
+    margin: 0px 10px;
+    padding-bottom: 30px;
+}
+
+.title h1 {
+    font-size: 25px;
+    font-weight: 700;
+
+    padding-bottom: 20px;
+}
+
+.title p {
+    word-spacing: 1px;
+}
+
+.try-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    padding: 0 50px;
+    margin: 20px 0 30px;
+
+    height: 80px;
+    border-radius: 10px;
+
+    background-color: hsl(248, 32%, 49%);
+
+    -webkit-box-shadow: 0px 14px 0px 0px rgba(0, 0, 0, 0.2); 
+    box-shadow: 0px 8px 0px -1px rgba(0, 0, 0, 0.2);
+}
+
+.try-button strong {
+    font-weight: 600;
+}
+
+.card-form {
+    padding: 24px 22px;
+
+    color: hsl(249, 10%, 26%);
+    border-radius: 10px;
+    background-color: white;
+
+    -webkit-box-shadow: 0px 14px 0px 0px rgba(0, 0, 0, 0.2); 
+    box-shadow: 0px 8px 0px -1px rgba(0, 0, 0, 0.2);
+}
+
+.card-form form {
+    display: flex;
+    flex-direction: column;
+}
+
+.input {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 16px;
+    position: relative;
+}
+
+.hidden {
+    display: none;
+}
+
+.input img {
+    position: absolute;
+    top: 16px;
+    right: 20px;
+}
+
+.empty {
+
+    padding: 3px 0;
+    font-size: 13px;
+    text-align: end;
+    color: hsl(0, 100%, 74%);
+}
+
+.card-form input {
+    padding: 0 15px;
+
+
+    height: 55px;
+    border-radius: 5px;
+}
+
+
+.card-form input:not(.button-valid) {
+    font-weight: 600;
+    /* border: 1px solid hsl(249, 10%, 80%) ; */
+}
+
+.true {
+    border: 1px solid hsl(249, 10%, 80%);
+}
+
+.false {
+    border: 2px solid hsl(0, 100%, 74%);
+}
+
+.card-form input:not(.button-valid):focus {
+    border: 2px solid hsl(154, 59%, 51%);
+    outline: none;
+}
+
+.button-valid {
+    cursor: pointer;
+
+    text-transform: uppercase;
+    font-weight: 600;
+
+    color: white;
+    background-color: hsl(154, 59%, 51%);
+    -webkit-box-shadow: 0px 5px 0px 0px hsl(154, 59%, 45%); 
+    box-shadow: 0px 5px 0px 0px hsl(154, 59%, 45%);
+
+    transition-property: all;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 200ms;
+}
+
+.button-valid:focus, .button-valid:hover {
+    background-color: hsl(154, 59%, 70%);
+    outline: none;
+}
+
+.terms {
+    color: hsl(249, 10%, 70%);
+    text-align: center;
+    font-size: 12px;
+
+    padding: 20px 10px 5px;
+}
+
+.terms a {
+    font-weight: 700;
+    color: hsl(0, 100%, 74%);
+    text-decoration: none;
+}
+
+
+@media (min-width: 425px) {
+    body {
+        background-image: url(/images/bg-intro-desktop.png);
+    }
+}
+
+@media (min-width: 768px) {
+    body {
+        height: 100vh;
+        width: 100vw;
+
+        justify-content: center;
+        align-items: center;
+    }
+
+    .main {
+        flex-direction: row;
+        justify-content: space-around;
+
+        width: 90vw;
+
+        margin: 0;
+    }
+
+    .title {
+        width: 40%;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        margin: 0;
+
+        text-align: left;
+    }
+
+
+    .title h1 {
+        font-size: 5vh;
+    }
+
+    .right-side {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        width: 40%;
+    }
+
+    .try-button {
+        margin: 0 0 30px;
+        padding: 0 70px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .main {
+        justify-content: center;
+    }
+}
