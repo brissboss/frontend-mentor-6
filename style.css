@@ -135,7 +135,6 @@ body {
 
 .card-form input:not(.button-valid) {
     font-weight: 600;
-    /* border: 1px solid hsl(249, 10%, 80%) ; */
 }
 
 .true {

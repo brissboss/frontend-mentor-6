@@ -10,6 +10,8 @@
 
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap">
 
+	<script src="/script.js" async></script>
+
 	<title>Frontend Mentor | Intro component with sign up form</title>
 </head>
 
@@ -29,30 +31,30 @@
 				<p><strong>Try it free 7 days</strong> then $20/mo. thereafter</p>
 			</div>
 			<div class="card-form">
-				<form action="">
-					<div class="input">
-						<input type="text" name="" id="" placeholder="First Name" class="true">
+				<form action="" id="form">
+					<div class="input" id="fName">
+						<input id="fist-name" type="text" name="fName" placeholder="First Name" class="true">
 						<p class="empty hidden">First Name cannot be empty</p>
 						<img src="/images/icon-error.svg" alt="" class="hidden">
 					</div>
-					<div class="input">
-						<input type="text" name="" id="" placeholder="Last Name" class="true">
+					<div class="input" id="lName">
+						<input id="last-name" type="text" name="lName" placeholder="Last Name" class="true">
 						<p class="empty hidden">Last Name cannot be empty</p>
 						<img src="/images/icon-error.svg" alt="" class="hidden">
 					</div>
-					<div class="input">
-						<input type="email" name="" id="" placeholder="Email Address" class="true">
+					<div class="input" id="email">
+						<input id="email" type="email" name="email" placeholder="Email Address" class="true">
 						<p class="empty hidden">Email Address cannot be empty</p>
-						<p class="false-email empty hidden">Looks like this is not an email</p>
+						<p class="empty hidden" id="email-error">Looks like this is not an email</p>
 						<img src="/images/icon-error.svg" alt="" class="hidden">
 					</div>
-					<div class="input">
-						<input type="password" name="" id="" placeholder="Password" class="true">
+					<div class="input" id="pass">
+						<input id="password" type="password" name="pass" placeholder="Password" class="true">
 						<p class="empty hidden">Password cannot be empty</p>
 						<img src="/images/icon-error.svg" alt="" class="hidden">
 					</div>
 	
-					<input type="button" value="Claim your free trial" class="button-valid">
+					<input type="submit" value="Claim your free trial" class="button-valid">
 				</form>
 				<p class="terms">
 					By clicking the button, you are agreeing to our <a href="">Terms and Services</a>
